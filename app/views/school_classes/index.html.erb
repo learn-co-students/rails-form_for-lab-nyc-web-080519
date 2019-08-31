@@ -1,0 +1,7 @@
+<h1>Here are all of the school classes: </h1>
+
+<% @schoolClasses.each do |school_class| %>
+  <%= link_to "Course: #{school_class.title + " | Room Number: " + school_class.room_number.to_s} | " , school_class_path(school_class) %>
+  <%# school_class.room_number %>
+   <%= link_to "Delete |", school_class_path(school_class), :method => "delete" %> <br>
+<% end %>
